@@ -1,51 +1,108 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>Feedback Form</title>
+    
+    <meta charset="UTF-8">
+    <title>Submit Your Feedback</title>
+    
     <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            margin: 50px;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #c2e9fb 0%, #a1c4fd 100%);
         }
 
         form {
-            max-width: 400px;
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+            width: 100%;
+            max-width: 440px;
+            transition: transform 0.3s ease;
         }
 
-        input,
-        textarea {
+        form:hover {
+            transform: scale(1.02);
+        }
+
+        h2 {
+            font-size: 26px;
+            text-align: center;
+            margin-bottom: 25px;
+            color: #2b2d42;
+        }
+
+        label {
+            font-size: 15px;
+            color: #333;
+            margin-bottom: 6px;
+            display: block;
+        }
+
+        input, textarea {
             width: 100%;
-            padding: 10px;
-            margin: 10px 0;
+            padding: 14px;
+            border: 1px solid #dcdcdc;
+            border-radius: 10px;
+            font-size: 15px;
+            margin-bottom: 20px;
+            transition: border 0.3s ease;
+        }
+
+        input:focus, textarea:focus {
+            border-color: #4da8da;
+            outline: none;
         }
 
         button {
-            padding: 10px 20px;
+            width: 100%;
+            padding: 14px;
+            font-size: 16px;
+            color: white;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background: linear-gradient(to right, #00c6ff, #0072ff);
         }
 
         #response {
             margin-top: 20px;
             font-weight: bold;
+            text-align: center;
         }
     </style>
 </head>
-
 <body>
 
-    <h2>Submit Your Feedback</h2>
-
     <form id="feedbackForm">
-        <label for="email">Your Email:</label>
+        <h2>Submit Your Feedback</h2>
+
+        <label for="email">Your Email</label>
         <input type="email" id="email" required>
 
-        <label for="message">Your Feedback:</label>
+        <label for="message">Your Feedback</label>
         <textarea id="message" rows="5" required></textarea>
 
         <button type="submit">Submit</button>
-    </form>
 
-    <div id="response"></div>
+        <div id="response"></div>
+    </form>
 
     <script>
         const form = document.getElementById('feedbackForm');
@@ -89,5 +146,4 @@
     </script>
 
 </body>
-
 </html>
