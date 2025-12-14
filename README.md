@@ -1,5 +1,8 @@
 # Serverless-Feedback-System
 
+**Detailed Blog Post:**
+[Read the full article on Medium](https://medium.com/@saikiranjavalkar/turning-an-idea-into-impact-building-a-scalable-serverless-feedback-system-on-aws-fa968a5053b8)
+
 A **cloud-native, serverless feedback collection system** built using **AWS services**, designed to seamlessly collect, store, and notify administrators about user feedback.  
 This system can be easily integrated into **multiple websites** using a single feedback link.
 
