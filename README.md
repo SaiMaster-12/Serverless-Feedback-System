@@ -41,7 +41,7 @@ Once feedback is submitted:
 
 ---
 
-## 🔄 Workflow
+## Workflow
 
 1. User submits feedback via the web interface
 2. API Gateway receives the request
